@@ -55,6 +55,10 @@ for game in game_objs:
 # Specify which channel the bot should write messages to.
 channel = discord.Object(id="286881621939060739")
 
+# Important modes to indicate how you want the bot to operate
+# Set Up mode: Will not post live channels so you can set up the games and users whitelist before using the bot for real.
+setup = True
+
 # You should also update roles.txt with the Discord role ids for any roles that are allowed to use commands like 
 # !add_user and !add_game. If roles.txt is empty, all roles have access to these commands.
 
@@ -144,5 +148,7 @@ async def on_ready():
 	print(bot.user.id)
 	print('------')
 
-bot.loop.create_task(checkLive())
+
+if not setup:
+	bot.loop.create_task(checkLive())
 bot.run(token)
