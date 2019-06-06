@@ -20,3 +20,6 @@ The bot will immediately check for all live streams based on the user and games 
 ## Commands
 * !add_user: Adds 1 or more users to the user whitelist. If the user whitelist is empty, all streams will be considered whitelisted. Example usage: !add_user Account1 Account2 Account3 ...
 * !add_game: Adds a game from the Twitch directory to the games whitelist. If the game whitelist is empty, all games will be considered whitelisted. Example usage: !add_game Example Game
+
+### TestGame.py
+TestGame.py is a script that can be used as an alternative method to getting game IDs from the Twitch API to add to the game whitelist. Simply update the games array on line 7 with the games you'd like to get the IDs for, and run "python testGame.py" to get an output of each game object from the Twitch API.
