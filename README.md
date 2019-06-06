@@ -7,12 +7,13 @@ Before using the bot, perform the following setup.
 1. Create a token.txt with a valid Discord bot token.
 1. Update livenow.py line 56 with the channel ID you want the bot to send messages to.
 1. (Optional) If you want select roles to have access to commands such as !add_user and !add_game, update roles.txt with role ids from Discord. Each role id should be on a separate line.
+1. (Optional) Run the bot with the setup mode equal to True. This will allow you to setup the game and user whitelists easily using the !add_user and !add_game commands without the bot spamming live now messages on first start up.
 
 ## How to use
 Requires at least Python 3.6.0 (Have not yet tested with newer versions of Python).
 
 Run the following command to start the bot:
-  python livenow.py
+* python livenow.py
   
 The bot will immediately check for all live streams based on the user and games whitelist, and post messages to the appropriate channel. It will then check every 5 minutes to see who is live, and send messages anytime a new channel has gone live.
 
